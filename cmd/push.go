@@ -15,7 +15,10 @@ type pushOptions struct {
 	module string
 	ref    string
 
-	sign bool
+	sign                  bool
+	profile               string
+	configMediaType       string
+	contentLayerMediaType string
 }
 
 func newPushCmd() *cobra.Command {
@@ -32,6 +35,9 @@ func newPushCmd() *cobra.Command {
 	}
 
 	cmd.Flags().BoolVarP(&opts.sign, "sign", "", false, "Signs the WebAssembly module and pushes the metadata to a trust server")
+	cmd.Flags().StringVarP(&opts.profile, "profile", "p", "", "Profile to use (overrides file extension)")
+	cmd.Flags().StringVarP(&opts.configMediaType, "configmediatype", "c", "", "Configuration media type to use (overrides profile and file extension)")
+	cmd.Flags().StringVarP(&opts.contentLayerMediaType, "contentlayermediatype", "l", "", "Content layer media type to use (overrides profile and file extension)")
 	return cmd
 }
 
@@ -45,5 +51,5 @@ func (p *pushOptions) run() error {
 
 	}
 
-	return oci.Push(p.ref, p.module, insecure, useHTTP)
+	return oci.Push(p.ref, p.module, insecure, useHTTP, p.profile, p.configMediaType, p.contentLayerMediaType)
 }
