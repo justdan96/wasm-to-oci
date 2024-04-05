@@ -10,7 +10,7 @@ require (
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
 	github.com/theupdateframework/notary v0.7.0
-	oras.land/oras-go v1.2.5
+	oras.land/oras-go v0.4.0
 )
 
 require (
@@ -50,9 +50,11 @@ require (
 	github.com/containerd/log v0.1.0 // indirect
 	github.com/distribution/reference v0.5.0 // indirect
 	github.com/docker/docker v25.0.1+incompatible // indirect
+	github.com/docker/go-units v0.5.0 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/kr/pretty v0.2.1 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
 	go.opentelemetry.io/otel v1.14.0 // indirect
 	go.opentelemetry.io/otel/trace v1.14.0 // indirect
+	rsc.io/letsencrypt v0.0.3 // indirect
 )
