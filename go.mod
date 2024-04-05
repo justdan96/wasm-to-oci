@@ -1,4 +1,4 @@
-module github.com/engineerd/wasm-to-oci
+module github.com/justdan96/wasm-to-oci
 
 go 1.16
 

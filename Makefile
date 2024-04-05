@@ -1,5 +1,5 @@
 PROJECT         := wasm-to-oci
-ORG             := engineerd
+ORG             := justdan96
 BINDIR          := $(CURDIR)/bin
 GOFLAGS         :=
 LDFLAGS         := -w -s

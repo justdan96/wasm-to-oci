@@ -8,7 +8,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	"github.com/engineerd/wasm-to-oci/pkg/tuf"
+	"github.com/justdan96/wasm-to-oci/pkg/tuf"
 )
 
 var (
