@@ -23,7 +23,7 @@ currently works with:
 
 # Installation
 
-Pre-built binaries for macOS, Linux, and Windows are available in [Releases](https://github.com/engineerd/wasm-to-oci/releases). Download the pre-built binary for your operating system and add it to your path.
+Pre-built binaries for macOS, Linux, and Windows are available in [Releases](https://github.com/justdan96/wasm-to-oci/releases). Download the pre-built binary for your operating system and add it to your path.
 
 The following example shows adding the Linux binary to your path in Linux.
 

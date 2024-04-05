@@ -1,5 +1,5 @@
 PROJECT         := wasm-to-oci
-ORG             := engineerd
+ORG             := justdan96
 BINDIR          := $(CURDIR)/bin
 GOFLAGS         :=
 LDFLAGS         := -w -s
@@ -27,7 +27,7 @@ test:
 	go test $(TESTFLAGS) ./...
 
 $(GOX):
-	(cd /; GO111MODULE=on go get -u github.com/mitchellh/gox)
+	go install github.com/mitchellh/gox@v1.0.1
 
 .PHONY: build-cross
 build-cross: LDFLAGS += -extldflags "-static"
@@ -40,7 +40,7 @@ lint:
 
 HAS_GOLANGCI     := $(shell $(CHECK) golangci-lint)
 HAS_GOIMPORTS    := $(shell $(CHECK) goimports)
-GOLANGCI_VERSION := v1.16.0
+GOLANGCI_VERSION := v1.57.2
 
 
 .PHONY: bootstrap
@@ -49,5 +49,5 @@ ifndef HAS_GOLANGCI
 	curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(GOPATH)/bin $(GOLANGCI_VERSION)
 endif
 ifndef HAS_GOIMPORTS
-	go get -u golang.org/x/tools/cmd/goimports
+	go install golang.org/x/tools/cmd/goimports@v0.20.0
 endif

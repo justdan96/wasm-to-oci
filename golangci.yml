@@ -6,7 +6,7 @@ linters:
   enable:
     - gofmt
     - goimports
-    - golint
+    # - golint
     - gosimple
     - ineffassign
     # - misspell
@@ -16,4 +16,4 @@ linters:
 
 linters-settings:
   goimports:
-    local-prefixes: github.com/engineerd/wasm-to-oci
+    local-prefixes: github.com/justdan96/wasm-to-oci
