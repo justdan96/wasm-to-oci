@@ -1,6 +1,6 @@
 module github.com/justdan96/wasm-to-oci
 
-go 1.16
+go 1.19
 
 require (
 	github.com/containerd/containerd v1.5.5
