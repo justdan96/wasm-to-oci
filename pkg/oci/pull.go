@@ -12,7 +12,6 @@ func Pull(ref, outFile string, insecure, useHTTP bool) error {
 	ctx, resolver, store := newORASContext(insecure, useHTTP)
 
 	pullOpts := []oras.PullOpt{
-		oras.WithAllowedMediaType(ContentLayerMediaType),
 		oras.WithPullEmptyNameAllowed(),
 	}
 
